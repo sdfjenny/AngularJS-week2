@@ -45,14 +45,6 @@ function ToBuyController(ShoppingListCheckOffService){
 		ShoppingListCheckOffService.remove(itemIdex);
 		
 		
-		if (ShoppingListCheckOffService.check.length == 0){
-			itemAdder.Message="Everything is bought!";
-			
-			
-		} else{itemAdder.Message="";
-		
-		        }
-		
 		
 		};
 	
@@ -72,7 +64,7 @@ AlreadyBoughtController.$inject = [
 
 function AlreadyBoughtController(ShoppingListCheckOffService){
 	var showList= this;
-	showList.Message=ShoppingListCheckOffService.message;
+	
 	
 	
 	showList.list=ShoppingListCheckOffService.getItems();
@@ -117,10 +109,10 @@ function ShoppingListCheckOffService() {
   
   
   
-  service.check = Tbuy;
   
   
-  service.message = Msg;
+  
+  
   
   
   
